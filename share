@@ -22,7 +22,8 @@ if has_remote $BRANCH; then
 
   if [ `git rev-parse HEAD` != "$WAS_AT" ]; then
     # Re-run tests before sharing if we merged new stuff from master
-    runtests $1
+    #runtests $1
+    echo 'would be rerunning tests now if we had a good way to do that'
   fi
 else
   # If the branch isn't shared, provide a last opportunity to squash, then share it
