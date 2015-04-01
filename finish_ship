@@ -9,3 +9,6 @@ if has_remote $BRANCH; then
   echo "IMPORTANT: Please remember that your local branch has a conflicting history with its remote now, due to rebase onto master. Don't let anyone keep working on the remote; it needs to be blown away via either outright removal or forced push."
 fi
 
+if [ "$1" == "-p" ]; then
+    git push dev master
+fi
